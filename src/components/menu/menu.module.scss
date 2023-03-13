@@ -1,0 +1,46 @@
+.root {
+  flex-grow: 1;
+  display: flex;
+  flex-shrink: 1;
+  background-color: #000;
+  padding: 50px;
+  flex-direction: column;
+  gap: 20px;
+}
+.logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.logoImg {
+  width: 50px;
+  height: 50px;
+}
+.logoText {
+  font-size: 24px;
+  color: #d12626;
+  font-weight: 900;
+  margin-left: 2rem;
+}
+.title {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hr {
+  color: #fff;
+  border: 0.5px solid #777;
+  width: 100%;
+}
+.list {
+  list-style-type: none;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.listItem {
+  color: #fff;
+  text-align: left;
+}
