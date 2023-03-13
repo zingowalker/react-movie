@@ -1,5 +1,6 @@
 .root {
   position: relative;
+  max-width: 199px;
 }
 .favimg {
   width: 100%;
@@ -35,7 +36,8 @@
 }
 
 .deleteImg {
-  width: 50px;
-  height: 50px;
+  height: 20px;
   opacity: 0.9;
+  width: 20px;
+  background-color: #de1515;
 }

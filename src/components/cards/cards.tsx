@@ -30,15 +30,15 @@ export const Cards = ({ className }: CardsProps) => {
 
     useEffect(() => {
         fetch(
-            query !== "" 
-                ?  `https://api.themoviedb.org/3/serach/movie?api_key=83260e74be0ddfcb195f18f665bf1f2e&query=${query}`
-                : `https://api.themoviedb.org/3/discover/movie?api_key=83260e74be0ddfcb195f18f665bf1f2e&sort_by=${sortBy}&with_genres=${genre}`
+            query !== ''
+                ? `https://api.themoviedb.org/3/search/movie/?api_key=83260e74be0ddfcb195f18f665bf1f2e&query=${query}`
+                : `https://api.themoviedb.org/3/discover/movie/?api_key=83260e74be0ddfcb195f18f665bf1f2e&sort_by=${sortBy}&genre_ids=${genre}`
         )
             .then((response) => response.json())
             .then((data) => setMovies(data.results))
             .catch((err) => console.log(err));
     }, [sortBy, genre, query]);
-    console.log(movies);
+    // console.log(movies);
     return (
         <div className={classNames(styles.root, className)}>
             {movies?.map((movie) => (

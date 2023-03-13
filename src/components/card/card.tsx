@@ -28,9 +28,9 @@ export const Card = ({ className, movie }: CardProps) => {
                 className={styles.cardimage}
             />
             <div className={styles.detail}>
-                <h1>{movie.title}</h1>
+                <h1>{movie.title.substring(0,26)}</h1>
                 <p className={styles.desc}>{movie.overview.substring(0, 220)}</p>
-                <span className={styles.rating}>{movie.vote_average}</span>
+                <span className={styles.rating}>{movie.vote_average.toFixed(1)}</span>
                 <button
                     className={styles.button}
                     onClick={() => dispatch({ type: 'ADD_MOVIE', payload: movie })}
